@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('site_setting', function (Blueprint $table) {
+        Schema::create('site_settings', function (Blueprint $table) {
             $table->increments('id');
             $table->string('display_name')->nullable();
             $table->string('name')->nullable();
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('site_setting');
+        Schema::dropIfExists('site_settings');
     }
 };

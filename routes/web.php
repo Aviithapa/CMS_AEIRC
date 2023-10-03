@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return redirect()->route('login');
+    return view('web-site.index');
 });
 
 Route::get('/dashboard', [AdminController::class, 'dashboard'])->middleware(['auth']);
